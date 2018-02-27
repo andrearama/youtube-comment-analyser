@@ -21,6 +21,7 @@ def import_comments(file_name):
         csvReader = csv.reader(csvDataFile)
         for row in csvReader:
             for count,element in enumerate(row):
+                # The comment text is two indexes after the time
                 if 'ago' in element:
                     try:
                         comments.append(row[count+2])
@@ -31,4 +32,4 @@ def import_comments(file_name):
     print('Total number of comments unsuccessfully extracted:'+ str(len(comments)-failed_retrivials_number))   
     print('Total number of comments unsuccessfully extracted:'+ str(failed_retrivials_number))        
 
-    return     
+    return comments     
