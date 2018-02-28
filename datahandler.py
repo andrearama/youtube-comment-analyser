@@ -29,7 +29,7 @@ def import_comments(file_name):
                         failed_retrivials_number = failed_retrivials_number+1
                     break
     
-    print('Total number of comments unsuccessfully extracted:'+ str(len(comments)-failed_retrivials_number))   
+    print('Total number of comments successfully extracted:'+ str(len(comments)-failed_retrivials_number))   
     print('Total number of comments unsuccessfully extracted:'+ str(failed_retrivials_number))        
 
     return comments     
